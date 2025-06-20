@@ -1,0 +1,14 @@
+{
+    "name": "streamflix",
+    "version": "1.0.0",
+    "description": "Streaming platform for movies",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "dependencies": {
+    "express": "^4.18.2",
+    "mysql2": "^2.3.0",
+    "bcrypt": "^5.1.0"
+}
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreamFlix - Video Player</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .video-player-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        .video-player {
+            width: 100%;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .video-controls {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            padding: 1rem;
+            background-color: var(--background-dark);
+            border-radius: 0 0 8px 8px;
+        }
+        .video-controls button {
+            padding: 0.5rem 1rem;
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .video-controls button:hover {
+            background-color: #ff0f1a;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">StreamFlix</a>
+        <ul class="nav-links">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#contact">Contact Us</a></li>
+            <li><a href="index.html#pricing">Pricing</a></li>
+        </ul>
+        <div class="auth-buttons">
+            <button class="login-btn">Login</button>
+            <button class="signup-btn">Sign Up</button>
+        </div>
+    </nav>
+
+    <div class="video-player-container">
+        <video class="video-player" controls>
+            <source id="video-source" src="" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="video-controls">
+            <button onclick="playPause()">Play/Pause</button>
+            <button onclick="toggleFullScreen()">Full Screen</button>
+        </div>
+    </div>
+
+    <script>
+        // Get video URL from query parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const videoUrl = urlParams.get('video');
+        if (videoUrl) {
+            document.getElementById('video-source').src = decodeURIComponent(videoUrl);
+            document.querySelector('.video-player').load();
+        }
+
+        // Video control functions
+        const video = document.querySelector('.video-player');
+        function playPause() {
+            if (video.paused) video.play();
+            else video.pause();
+        }
+        function toggleFullScreen() {
+            if (!document.fullscreenElement) {
+                video.requestFullscreen();
+            } else {
+                document.exitFullscreen();
+            }
+        }
+    </script>
+</body>
+</html>

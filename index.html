@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreamFlix</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#" class="logo">StreamFlix</a>
+        <ul class="nav-links">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+        </ul>
+        <div class="auth-buttons">
+            <button class="login-btn">Login</button>
+            <button class="signup-btn">Sign Up</button>
+        </div>
+    </nav>
+
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">×</span>
+            <h2>Login to StreamFlix</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" required>
+                </div>
+                <button type="submit" class="submit-btn">Login</button>
+                <p class="form-footer">Don't have an account? <a href="#" class="signup-link">Sign Up</a></p>
+            </form>
+        </div>
+    </div>
+
+    <div id="signup-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">×</span>
+            <h2>Create Account</h2>
+            <form id="signup-form">
+                <div class="form-group">
+                    <label for="signup-username">Username</label>
+                    <input type="text" id="signup-username" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-email">Email</label>
+                    <input type="email" id="signup-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" required>
+                </div>
+                <button type="submit" class="submit-btn">Sign Up</button>
+                <p class="form-footer">Already have an account? <a href="#" class="login-link">Login</a></p>
+            </form>
+        </div>
+    </div>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Unlimited Movies, TV Shows, and More</h1>
+            <p>Watch anywhere. Cancel anytime.</p>
+            <button class="get-started-btn" aria-label="Get started with StreamFlix">Get Started</button>
+        </div>
+    </section>
+
+    <section class="top-picks">
+        <h2>Top Picks</h2>
+        <div class="movie-row" id="movie-row">
+            <!-- Movies will be dynamically inserted here -->
+        </div>
+    </section>
+
+    <section class="categories">
+        <h2>Browse by Category</h2>
+        <div class="category-grid">
+            <div class="category-card" style="background-image: url('https://via.placeholder.com/300x200');">
+                <h3>Fantasy</h3>
+                <p>Magical worlds and epic adventures</p>
+            </div>
+            <div class="category-card" style="background-image: url('https://via.placeholder.com/300x200');">
+                <h3>K-Drama</h3>
+                <p>Korean television dramas</p>
+            </div>
+            <div class="category-card" style="background-image: url('https://via.placeholder.com/300x200');">
+                <h3>Anime</h3>
+                <p>Japanese animated content</p>
+            </div>
+            <div class="category-card" style="background-image: url('https://via.placeholder.com/300x200');">
+                <h3>Sci-Fi</h3>
+                <p>Futuristic and space adventures</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <h2>About StreamFlix</h2>
+        <div class="about-content">
+            <p>StreamFlix is your ultimate destination for streaming movies and TV shows. With a vast library of content across various genres, we bring entertainment to your fingertips.</p>
+            <div class="features">
+                <div class="feature">
+                    <i class="fas fa-film"></i>
+                    <h3>Extensive Library</h3>
+                    <p>Thousands of movies and TV shows</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-tv"></i>
+                    <h3>Watch Anywhere</h3>
+                    <p>Stream on any device</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-download"></i>
+                    <h3>Download & Watch</h3>
+                    <p>Watch offline anytime</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing" id="pricing">
+        <h2>Choose Your Plan</h2>
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <h3>Basic</h3>
+                <p class="price">$8.99<span>/month</span></p>
+                <ul>
+                    <li>HD Streaming</li>
+                    <li>Watch on 1 device</li>
+                    <li>Limited content library</li>
+                </ul>
+                <button class="plan-btn">Choose Plan</button>
+            </div>
+            <div class="pricing-card featured">
+                <h3>Standard</h3>
+                <p class="price">$13.99<span>/month</span></p>
+                <ul>
+                    <li>Full HD Streaming</li>
+                    <li>Watch on 2 devices</li>
+                    <li>Full content library</li>
+                    <li>Download content</li>
+                </ul>
+                <button class="plan-btn">Choose Plan</button>
+            </div>
+            <div class="pricing-card">
+                <h3>Premium</h3>
+                <p class="price">$17.99<span>/month</span></p>
+                <ul>
+                    <li>4K + HDR Streaming</li>
+                    <li>Watch on 4 devices</li>
+                    <li>Full content library</li>
+                    <li>Download content</li>
+                    <li>Exclusive content</li>
+                </ul>
+                <button class="plan-btn">Choose Plan</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-content">
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="contact-name">Name</label>
+                    <input type="text" id="contact-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact-email">Email</label>
+                    <input type="email" id="contact-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact-message">Message</label>
+                    <textarea id="contact-message" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About Us</h4>
+                <p>Your ultimate streaming destination for movies and TV shows.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect With Us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 StreamFlix. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+    <script>
+        // Modal functionality
+        const loginModal = document.getElementById('login-modal');
+        const signupModal = document.getElementById('signup-modal');
+        const loginBtn = document.querySelector('.login-btn');
+        const signupBtn = document.querySelector('.signup-btn');
+        const loginLink = document.querySelector('.signup-link');
+        const signupLink = document.querySelector('.login-link');
+        const getStartedBtn = document.querySelector('.get-started-btn');
+        const closes = document.querySelectorAll('.close');
+        const loginForm = document.getElementById('login-form');
+        const signupForm = document.getElementById('signup-form');
+
+        loginBtn.onclick = () => loginModal.style.display = 'block';
+        signupBtn.onclick = () => signupModal.style.display = 'block';
+        loginLink.onclick = () => {
+            loginModal.style.display = 'block';
+            signupModal.style.display = 'none';
+        };
+        signupLink.onclick = () => {
+            signupModal.style.display = 'block';
+            loginModal.style.display = 'none';
+        };
+        getStartedBtn.onclick = () => {
+            signupModal.style.display = 'block';
+            loginModal.style.display = 'none';
+        };
+        closes.forEach(close => close.onclick = () => {
+            loginModal.style.display = 'none';
+            signupModal.style.display = 'none';
+        });
+        window.onclick = (event) => {
+            if (event.target == loginModal) loginModal.style.display = 'none';
+            if (event.target == signupModal) signupModal.style.display = 'none';
+        };
+
+        // Form submission handling
+        loginForm.onsubmit = (event) => {
+            event.preventDefault();
+            const email = document.getElementById('login-email').value;
+            const password = document.getElementById('login-password').value;
+
+            if (!email || !password) {
+                alert('Please fill in all fields.');
+                return;
+            }
+
+            // Simulate login validation (replace with backend API call)
+            if (email.includes('@') && password.length >= 6) {
+                alert('Login successful! Welcome to StreamFlix.');
+                loginModal.style.display = 'none';
+                loginForm.reset();
+            } else {
+                alert('Invalid email or password. Password must be at least 6 characters.');
+            }
+        };
+
+        signupForm.onsubmit = (event) => {
+            event.preventDefault();
+            const username = document.getElementById('signup-username').value;
+            const email = document.getElementById('signup-email').value;
+            const password = document.getElementById('signup-password').value;
+
+            if (!username || !email || !password) {
+                alert('Please fill in all fields.');
+                return;
+            }
+
+            if (!email.includes('@') || password.length < 6) {
+                alert('Please enter a valid email and a password with at least 6 characters.');
+                return;
+            }
+
+            // Simulate signup (replace with backend API call)
+            alert(`Sign Up successful! Welcome, ${username}!`);
+            signupModal.style.display = 'none';
+            signupForm.reset();
+        };
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Fetch and display top picks
+        async function fetchTopPicks() {
+            try {
+                const response = await fetch('http://localhost:3000/api/top-picks');
+                if (!response.ok) throw new Error('Failed to fetch movies');
+                const movies = await response.json();
+                const movieRow = document.getElementById('movie-row');
+                movieRow.innerHTML = '';
+                movies.forEach(movie => {
+                    const movieCard = document.createElement('div');
+                    movieCard.className = 'movie-card';
+                    movieCard.innerHTML = `
+                        <img src="${movie.poster_url}" alt="${movie.title}">
+                        <div class="movie-info">
+                            <h3>${movie.title}</h3>
+                            <p>Genre: ${movie.genres.join(', ')}</p>
+                            <p class="rating">⭐ ${movie.rating}</p>
+                        </div>
+                    `;
+                    movieCard.onclick = () => window.location.href = `player.html?video=${encodeURIComponent(movie.stream_url)}`;
+                    movieRow.appendChild(movieCard);
+                });
+            } catch (error) {
+                console.error('Error fetching top picks:', error);
+                // Fallback to static data if API fails
+                const fallbackMovies = [
+                    {
+                        title: 'Attack on Titan',
+                        genres: ['Anime', 'Action'],
+                        rating: 8.8,
+                        poster_url: 'C:/Users/liyaa/Desktop/streamflix/assests/images/aot.jpg',
+                        stream_url: 'C:/Users/liyaa/Desktop/streamflix/assests/videos/aot.mp4'
+                    },
+                    {
+                        title: 'Demon Slayer',
+                        genres: ['Anime', 'Action'],
+                        rating: 8.7,
+                        poster_url: 'C:/Users/liyaa/Desktop/streamflix/assests/images/ds.jpg',
+                        stream_url: 'C:/Users/liyaa/Desktop/streamflix/assests/videos/ds.mp4'
+                    },
+                    {
+                        title: 'Inglourious Basterds',
+                        genres: ['Drama', 'Thriller'],
+                        rating: 8.3,
+                        poster_url: 'C:/Users/liyaa/Desktop/streamflix/assests/images/ib.jpg',
+                        stream_url: 'C:/Users/liyaa/Desktop/streamflix/assests/videos/ib.mp4'
+                    },
+                    {
+                        title: 'Squid Game',
+                        genres: ['Thriller', 'Drama'],
+                        rating: 8.0,
+                        poster_url: 'C:/Users/liyaa/Desktop/streamflix/assests/images/sg.jpg',
+                        stream_url: 'C:/Users/liyaa/Desktop/streamflix/assests/videos/sg.mp4'
+                    },
+                    {
+                        title: "Surf's Up",
+                        genres: ['Animation', 'Comedy'],
+                        rating: 6.7,
+                        poster_url: 'C:/Users/liyaa/Desktop/streamflix/assests/images/su.jpg',
+                        stream_url: 'C:/Users/liyaa/Desktop/streamflix/assests/videos/su.mp4'
+                    }
+                ];
+                const movieRow = document.getElementById('movie-row');
+                movieRow.innerHTML = '';
+                fallbackMovies.forEach(movie => {
+                    const movieCard = document.createElement('div');
+                    movieCard.className = 'movie-card';
+                    movieCard.innerHTML = `
+                        <img src="${movie.poster_url}" alt="${movie.title}">
+                        <div class="movie-info">
+                            <h3>${movie.title}</h3>
+                            <p>Genre: ${movie.genres.join(', ')}</p>
+                            <p class="rating">⭐ ${movie.rating}</p>
+                        </div>
+                    `;
+                    movieCard.onclick = () => window.location.href = `player.html?video=${encodeURIComponent(movie.stream_url)}`;
+                    movieRow.appendChild(movieCard);
+                });
+            }
+        }
+
+        fetchTopPicks();
+    </script>
+</body>
+</html>
