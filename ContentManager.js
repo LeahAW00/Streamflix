@@ -10,7 +10,7 @@ class ContentManager extends EventEmitter {
         this.db = mysql.createPool({
             host: 'localhost',
             user: 'root',
-            password: 'your_password',
+            password: 'pass',
             database: 'streamflix_db'
         });
     }
